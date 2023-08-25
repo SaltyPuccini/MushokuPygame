@@ -23,7 +23,7 @@ class Game:
             case self.gamestate.GAME:
                 pass
             case other:
-                pass
+                raise UnknownGamestateError(self.gamestate)
 
         events = pygame.event.get()
         for event in events:
