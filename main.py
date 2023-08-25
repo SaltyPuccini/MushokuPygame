@@ -4,6 +4,7 @@ from GameState import GameState
 from GlobalSettings import WINDOW_HEIGHT, WINDOW_WIDTH
 
 pygame.init()
+pygame.event.set_blocked((pygame.MOUSEMOTION, pygame.MOUSEBUTTONUP, pygame.MOUSEBUTTONDOWN))
 screen = pygame.display.set_mode((WINDOW_HEIGHT, WINDOW_WIDTH))
 clock = pygame.time.Clock()
 game = Game(screen)
