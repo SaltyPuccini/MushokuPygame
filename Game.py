@@ -1,7 +1,7 @@
 import pygame
 
 from GameState import GameState
-from MainMenu import MainMenu
+from Menus.MainMenu import MainMenu
 from CustomExceptions.GamestateError import UnknownGamestateError
 
 

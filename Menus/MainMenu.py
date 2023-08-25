@@ -1,13 +1,11 @@
 from typing import List
 
-import pygame
 import pygame_menu
 
-import GlobalSettings
 from GameState import GameState
 from GlobalSettings import WINDOW_WIDTH, WINDOW_HEIGHT
-from SettingsMenu import SettingsMenu
-from AboutSection import AboutSection
+from Menus.SettingsMenu import SettingsMenu
+from Menus.AboutSection import AboutSection
 
 class MainMenu:
     def __init__(self, screen, game):
