@@ -5,3 +5,4 @@ class GameState(Enum):
     GAME = auto()
     MAIN_MENU = auto()
     QUIT = auto()
+    LEVEL = auto()

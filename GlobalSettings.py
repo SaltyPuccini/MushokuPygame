@@ -1,24 +1,27 @@
-import pygame
 import pygame_menu
 from pygame_menu import Theme
 
-from GameState import GameState
-
 COLORS = {
-    "WHITE": [255, 255, 255],
-    "GREY": [127, 127, 127],
-    "CRIMSON": [154, 0, 0],
-    "BLACK": [0, 0, 0],
-    "DARK_YELLOW": [102, 102, 0],
-    "DARK_BLUE": [0, 0, 153]
+    "WHITE": (255, 255, 255),
+    "GREY": (127, 127, 127),
+    "CRIMSON": (154, 0, 0),
+    "BLACK": (0, 0, 0),
+    "DARK_YELLOW": (102, 102, 0),
+    "DARK_BLUE": (0, 0, 153)
 }
 
-WINDOW_HEIGHT: int = 1280
-WINDOW_WIDTH: int = 720
+
+WINDOW_WIDTH: int = 1280
+WINDOW_HEIGHT: int = 720
+
+
+BACKGROUND_PATH = "Resources/main_menu_background.jpg"
+TEST_BG_PATH = "Resources/test_bg.jpg"
+
 MENU_ENTRIES_FONT_SIZE: int = 80
 
 MAIN_MENU_IMAGE = pygame_menu.baseimage.BaseImage(
-    image_path="Resources/main_menu_background.jpg",
+    image_path=BACKGROUND_PATH,
     drawing_mode=pygame_menu.baseimage.IMAGE_MODE_REPEAT_XY)
 
 MAIN_MENU_THEME = Theme(background_color=MAIN_MENU_IMAGE,
