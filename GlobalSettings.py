@@ -13,13 +13,15 @@ COLORS = {
 WINDOW_WIDTH: int = 1280
 WINDOW_HEIGHT: int = 704
 
-WIDTH_CENTER: int = int(WINDOW_WIDTH / 2 - 64)
-HEIGHT_CENTER: int = int(WINDOW_HEIGHT / 2 - 32)
+TILE_SIZE: int = 32
 
-TILE_SIZE: int = 64
+WIDTH_CENTER: int = int(WINDOW_WIDTH / 2 - TILE_SIZE)
+HEIGHT_CENTER: int = int(WINDOW_HEIGHT / 2 - TILE_SIZE)
 
 BACKGROUND_PATH = "Resources/main_menu_background.jpg"
-TEST_BG_PATH = "Resources/test_bg.jpg"
+TEST_BG_PATH = "Resources/map.jpg"
+TEST_CHARACTER_PATH = "Resources/character_sprite.png"
+TEST_NPC_SPRITE_PATH = "Resources/test_NPC_sprite.png"
 
 MENU_ENTRIES_FONT_SIZE: int = 80
 

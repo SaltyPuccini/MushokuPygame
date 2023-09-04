@@ -20,4 +20,4 @@ while True:
     # Render the graphics here.
 
     pygame.display.update()  # Refresh on-screen display
-    clock.tick(60)  # wait until next frame (at 60 FPS)
+    clock.tick(30)  # wait until next frame (at 60 FPS)

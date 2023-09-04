@@ -3,7 +3,6 @@ from pygame.event import Event
 
 from Game import Game
 from GameState import GameState
-from GlobalSettings import TILE_SIZE
 
 
 class EventsHandler:
@@ -14,7 +13,7 @@ class EventsHandler:
     def handle_events(self):
         events = pygame.event.get()
         for event in events:
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN and not self.game.level.map.is_animation_ongoing:
                 self.handle_menu_key_press_events(event)
                 self.handle_main_character_movement(event)
 
@@ -26,12 +25,24 @@ class EventsHandler:
             self.game.gamestate = GameState.QUIT
 
     def handle_main_character_movement(self, event: Event):
-        main_character = self.game.level.main_character
+        animation_path = "Resources/Animation/"
+        drawn_map = self.game.level.map
         if event.key == pygame.K_DOWN:
-            main_character.character_position_y += TILE_SIZE
+            animation_path += "WalkDown"
+            drawn_map.animation_path = animation_path
+            drawn_map.is_animation_ongoing = True
+
         if event.key == pygame.K_UP:
-            main_character.character_position_y -= TILE_SIZE
+            animation_path += "WalkUp"
+            drawn_map.animation_path = animation_path
+            drawn_map.is_animation_ongoing = True
+
         if event.key == pygame.K_RIGHT:
-            main_character.character_position_x += TILE_SIZE
+            animation_path += "WalkRight"
+            drawn_map.animation_path = animation_path
+            drawn_map.is_animation_ongoing = True
+
         if event.key == pygame.K_LEFT:
-            main_character.character_position_x -= TILE_SIZE
+            animation_path += "WalkLeft"
+            drawn_map.animation_path = animation_path
+            drawn_map.is_animation_ongoing = True
