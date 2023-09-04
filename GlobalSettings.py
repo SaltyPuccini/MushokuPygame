@@ -10,10 +10,13 @@ COLORS = {
     "DARK_BLUE": (0, 0, 153)
 }
 
-
 WINDOW_WIDTH: int = 1280
-WINDOW_HEIGHT: int = 720
+WINDOW_HEIGHT: int = 704
 
+WIDTH_CENTER: int = int(WINDOW_WIDTH / 2 - 64)
+HEIGHT_CENTER: int = int(WINDOW_HEIGHT / 2 - 32)
+
+TILE_SIZE: int = 64
 
 BACKGROUND_PATH = "Resources/main_menu_background.jpg"
 TEST_BG_PATH = "Resources/test_bg.jpg"

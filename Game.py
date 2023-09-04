@@ -11,7 +11,7 @@ class Game:
 
     def __init__(self):
         self.gamestate: GameState = GameState.MAIN_MENU
-        self.level = Level(TEST_BG_PATH, pygame.sprite.Group(), [0, 0])
+        self.level = Level(TEST_BG_PATH)
 
     def process_gamestate(self):
 
